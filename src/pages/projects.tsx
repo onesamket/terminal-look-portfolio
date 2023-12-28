@@ -1,8 +1,14 @@
+import Card from "../components/Card"
 
 const Projects = () => {
     return (
-        <div>Projects</div>
+        <div className="flex items-center justify-center">
+            <Card />
+        </div>
     )
 }
 
 export default Projects
+
+
+

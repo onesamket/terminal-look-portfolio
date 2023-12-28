@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 
 import { useEffect } from 'react';
 import { Terminal } from 'primereact/terminal';
@@ -19,8 +18,8 @@ export default function TerminalHeader() {
                 router('/')
                 break;
 
-            case 'skill':
-                response = 'Skills  page  ';
+            case 'skills':
+                response = 'Skills';
                 router('/skill')
                 break;
 
@@ -30,26 +29,30 @@ export default function TerminalHeader() {
                 break;
 
             case 'about':
-                response = 'About me   ';
+                response = 'About';
                 router('/about')
                 break;
             case 'contact':
-                response = 'contact Me  ';
+                response = 'contact';
                 router('/contact')
                 break;
             case 'cls':
                 response = '';
+                break;
+            case 'ls':
+                router("/")
+                response = 'all commands \n "home" \n "skill" \n "projects" \n "contact" \n "about"';
                 break;
             case 'clear':
                 response = '';
                 break;
             case 'safe':
                 router("/")
-                response = 'your are safe now 😆';
+                response = 'Home Page';
                 break;
             case '..':
                 router("/")
-                response = 'your are safe now 😆';
+                response = 'home Page';
                 break;
             default:
                 response = 'unknown command  ';
@@ -72,17 +75,18 @@ export default function TerminalHeader() {
     }, [commandHandler]);
 
     return (
-        <div className="card terminal">
-            {/* @ts-expect-error  */}
+        <div className=" relative card terminal-demo">
             <Terminal
-                className='bg-black  min-h-screen shadow-2xl border-none'
-                welcomeMessage=""
+                autoFocus={true}
+                className='bg-inherit min-h-12 h-auto md:min-h-screen shadow-2xl border-none'
+                welcomeMessage='Type ls ...'
                 prompt="Onesmaket $"
+
                 pt={{
-                    root: ' text-white',
-                    prompt: 'text-gray-400 mr-2',
-                    command: 'text-primary-300',
-                    response: 'text-primary-300'
+                    root: { className: 'surface-900 text-white' },
+                    command: { className: 'text-blue-500' },
+                    prompt: { className: 'text-yellow-500' },
+                    response: { className: 'text-purple-500' }
                 }}
             />
         </div>
