@@ -41,7 +41,7 @@ export default function TerminalHeader() {
                 break;
             case 'ls':
                 router("/")
-                response = 'all commands \n "home" \n "skill" \n "projects" \n "contact" \n "about"';
+                response = 'all commands \n "home" \n "Skills" \n "projects" \n "contact" \n "about"';
                 break;
             case 'clear':
                 response = '';

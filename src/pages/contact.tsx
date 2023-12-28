@@ -1,5 +1,4 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Avatar } from 'primereact/avatar';
 import { Toast } from 'primereact/toast';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
@@ -41,7 +40,7 @@ const Contact = () => {
             sticky: true,
             content: <div className=" w-full  rounded shadow-2xl flex flex-col justify-center items-center">
                 <div className="flex items-center gap-2">
-                    <Avatar className='h-14 w-14 ' image="https:github.com/onesamket.png" shape="circle" />
+                    <img className='h-14 w-14 rounded-full' src="https:github.com/onesamket.png" />
                     <div className='w-full flex flex-col'>
                         <span className="font-bold text-900">Tewodros Birhanu</span>
                         <a className='text-indigo-100' href="mailto:onesamket@gmail.com">onesamket@gmail.com</a>
